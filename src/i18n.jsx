@@ -21,7 +21,10 @@ export const UI = {
       para: "I build autonomous systems that bridge the gap between AI and hardware. My goal is to create machines that solve real-world problems through innovation and solid engineering.",
       marks: ['Robotics Engineer', 'Builder mindset', 'Hardware/Software integration', 'Autonomous systems specialist'],
     },
-    contact: { num: '§ 07', title: "Let's talk.", kicker: 'Open to opportunities', email: 'Email', linkedin: 'LinkedIn', phone: 'Phone', print: 'Print CV' },
+    contact: { 
+      num: '§ 07', title: "Let's talk.", kicker: 'Open to opportunities', email: 'Email', linkedin: 'LinkedIn', phone: 'Phone', print: 'Print CV',
+      bestFits: "Robotics Engineer · Perception / AI · Autonomous Systems · Research Engineer"
+    },
     footer: 'Reda OULD OULHADJ · 2026 · Built with React & Three.js',
   },
   fr: {
@@ -44,7 +47,10 @@ export const UI = {
       para: "Je construis des systèmes autonomes qui relient l'IA au matériel réel. Mon but est de créer des machines qui résolvent des problèmes concrets par l'innovation.",
       marks: ['Ingénieur Robotique', 'Esprit constructeur', 'Intégration Hardware/Software', 'Spécialiste systèmes autonomes'],
     },
-    contact: { num: '§ 07', title: "Contact.", kicker: 'Ouvert aux opportunités', email: 'Email', linkedin: 'LinkedIn', phone: 'Téléphone', print: 'Imprimer CV' },
+    contact: { 
+      num: '§ 07', title: "Contact.", kicker: 'Ouvert aux opportunités', email: 'Email', linkedin: 'LinkedIn', phone: 'Téléphone', print: 'Imprimer CV',
+      bestFits: "Ingénieur Robotique · Perception / IA · Systèmes Autonomes · Ingénieur de Recherche"
+    },
     footer: 'Reda OULD OULHADJ · 2026 · Construit avec React & Three.js',
   }
 };
