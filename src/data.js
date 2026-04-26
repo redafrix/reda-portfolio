@@ -1,0 +1,1 @@
+export const PROFILE = { name: 'Reda OULD OULHADJ', email: 'redaouldoulhadj@gmail.com', phone: '+33 7 45 52 17 25' };
