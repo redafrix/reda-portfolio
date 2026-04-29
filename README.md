@@ -1,4 +1,4 @@
-# Reda OULD OULHADJ — Portfolio
+# Lounas Gana — Portfolio
 
 Production build of the `Portfolio.html` design: Vite + React 18 + Three.js, warm-paper aesthetic, three interactive WebGL sims (A\* grid planner, potential-field quadrotor, 4-DOF manipulator IK).
 
@@ -59,4 +59,4 @@ All copy lives in `src/data.js`. The sims are self-contained in `src/sims.js` �
 
 ## License
 
-Personal portfolio content — © Reda OULD OULHADJ 2026.
+Personal portfolio content — © Lounas Gana 2026.

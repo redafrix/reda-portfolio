@@ -542,7 +542,7 @@ function AppInner() {
       <footer>
         <div className="wrap" style={{ display: 'flex', justifyContent: 'space-between', width: '100%', flexWrap: 'wrap', gap: 12 }}>
           <span>{ui.footer}</span>
-          <span>{data.PROFILE.location} · FR C2 / EN C2</span>
+          <span>{data.PROFILE.location} · FR C2 / EN Fluent</span>
         </div>
       </footer>
     </>
