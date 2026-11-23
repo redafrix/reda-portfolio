@@ -1,62 +1,52 @@
-# Lounas Gana — Portfolio
+# Reda Ould Oulhadj — Robotics & AI portfolio
 
-Production build of the `Portfolio.html` design: Vite + React 18 + Three.js, warm-paper aesthetic, three interactive WebGL sims (A\* grid planner, potential-field quadrotor, 4-DOF manipulator IK).
+**Live site: https://redafrix.github.io/reda-portfolio/**
+
+My portfolio as a robotics & AI engineer (M2 Perception Artificielle et Robotique, Université Clermont Auvergne):
+projects, experience, education and skills, in English and French, with project videos and reports.
+
+It includes three small robotics simulations that run in the browser (Three.js / WebGL):
+
+- **A\* grid planner** — finds the shortest path through a random obstacle grid, step by step.
+- **Potential-field quadrotor** — a drone pulled to the goal and pushed away from obstacles.
+- **4-DOF arm inverse kinematics** — the arm follows your mouse pointer.
 
 ## Stack
 
-- **Vite 5** — dev server + production bundling (code-split: `three`, `react`, app)
-- **React 18** (ES modules, not CDN dev builds)
-- **Three.js 0.160** (npm, tree-shakeable import)
-- Google Fonts: Space Grotesk · Inter Tight · JetBrains Mono
+Vite 5 · React 18 · Three.js 0.160 · plain CSS. No backend: the build is a static site.
 
-## Dev
+## Run it locally
 
 ```bash
 npm install
 npm run dev        # http://localhost:5173
+npm run build      # static site in dist/
+npm run preview    # serve dist/ on :4173
 ```
 
-## Production build
+## Deployment
 
-```bash
-npm run build      # → dist/
-npm run preview    # serve dist/ locally on :4173
-```
+Every push to `master` builds the site and publishes it to GitHub Pages
+(`.github/workflows/deploy.yml`).
 
-The `dist/` folder is a fully static bundle — deploy to any static host (Vercel, Netlify, GitHub Pages, Cloudflare Pages, nginx, S3+CF). No server runtime needed.
-
-## Project layout
+## Where things are
 
 ```
-.
-├── index.html              # HTML shell, meta tags, font preconnect
-├── vite.config.js          # bundling + manualChunks split
-├── public/assets/
-│   ├── reports/*.pdf       # served as-is (no hashing)
-│   └── videos/*.mp4
-└── src/
-    ├── main.jsx            # React root
-    ├── App.jsx             # all sections (Nav, Hero, Stats, Projects, Sims, Experience, Skills, About, Contact)
-    ├── data.js             # PROFILE / PROJECTS / EXPERIENCE / EDUCATION / SKILL_GROUPS
-    ├── sims.js             # Three.js sims (hero, astar, quad, manip)
-    └── styles.css
+src/
+├── data.js        # all the content: profile, projects, experience, education, skills
+├── i18n.jsx       # English / French text
+├── LangContext.jsx
+├── App.jsx        # page sections (hero, projects, simulations, experience, skills, contact)
+├── sims.js        # the three WebGL simulations
+└── styles.css
+public/assets/
+├── reports/       # project reports (PDF)
+└── videos/        # project videos (MP4)
 ```
 
-## Changes from the design prototype
+To change the content, edit `src/data.js` (and `src/i18n.jsx` for interface text).
 
-- ES-module bundling instead of in-browser Babel + CDN React dev builds
-- `window.Nav` / `window.Hero` / … globals replaced by normal React components
-- Removed the `TweaksPanel` + `__edit_mode_*` postMessage plumbing (design-tool-only)
-- Fixed `<window.App />` → `<App />` in the render root
-- Added `<meta>` tags (description, Open Graph, theme-color), inline SVG favicon
-- Keyboard-accessible project cards (Enter / Space), `aria-expanded`
-- `@media print` rules for clean `⌘P → Save as PDF`
-- Assets self-hosted under `public/assets/`; paths in `data.js` unchanged
+## Credits
 
-## Editing content
-
-All copy lives in `src/data.js`. The sims are self-contained in `src/sims.js` — see the `SIMS.hero`, `SIMS.astar`, `SIMS.quad`, `SIMS.manip` exports.
-
-## License
-
-Personal portfolio content — © Lounas Gana 2026.
+The layout started from an open portfolio template and was rewritten with my own content, projects and media.
+© 2026 Reda Ould Oulhadj.

@@ -1,9 +1,9 @@
 {
-  "name": "lounas-portfolio",
+  "name": "reda-portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Lounas Gana — Robotics & AI portfolio (Vite + React + Three.js)",
+  "description": "Reda Ould Oulhadj — Robotics & AI portfolio (Vite + React + Three.js)",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
